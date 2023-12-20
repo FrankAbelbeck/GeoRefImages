@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<!-- This file is part of the GeoRefImages Firefox extension.
+
+    GeoRefImages is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    GeoRefImages is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with GeoRefImages.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.8103448"
+     inkscape:cx="27.895239"
+     inkscape:cy="137.54286"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="0"
+     inkscape:window-y="43"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="false">
+    <sodipodi:guide
+       position="14.552081,16.139583"
+       orientation="0,-1"
+       id="guide13247"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:nodetypes="ccccccccccccccccccccccccccc"
+       d="m 13.141238,54.59451 3.108811,-1.343232 3.947972,10.369208 c 0.316579,0.924776 0.837063,1.25493 1.445545,0.64645 l 1.942776,-1.903114 c 2.042811,-2.042817 1.595178,-3.975148 1.22976,-7.024835 l -0.912981,-6.278259 13.18693,-11.356486 11.084304,21.472485 c 0.52659,1.027212 1.169449,1.05333 1.739264,0.483484 l 3.025469,-2.910583 c 2.336168,-2.336173 2.072619,-4.616478 1.509796,-7.508479 L 50.349679,25.621356 C 55.888679,19.57645 61.387943,12.618338 63.411181,4.3221127 55.114981,6.3453587 48.156884,11.844632 42.111987,17.383649 L 18.492206,13.284422 c -2.892035,-0.562862 -5.172324,-0.826414 -7.508492,1.509766 l -2.9105893,3.025474 c -0.569768,0.569783 -0.54368,1.212677 0.48352,1.739259 L 30.029089,30.643258 18.672632,43.830215 12.39439,42.91724 C 9.3446917,42.551798 7.4123817,42.10418 5.3695637,44.146999 l -1.9031224,1.942764 c -0.6084841,0.608484 -0.2786506,1.128885 0.6464591,1.445557 l 10.3691506,3.947953 z"
+       style="display:inline;fill:#c0c0ff;fill-opacity:1;fill-rule:evenodd;stroke:#000080;stroke-width:6.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       id="path4778-3"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

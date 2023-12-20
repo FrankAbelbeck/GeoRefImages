@@ -1,0 +1,96 @@
+/* This file is part of the GeoRefImages Firefox extension.
+
+    GeoRefImages is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    GeoRefImages is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with GeoRefImages.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
+body {
+	font-family: sans;
+	color: white;
+	background: #202020;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	min-height: 100vh;
+	gap: 1em;
+}
+
+h4 {
+	margin: 0;
+	padding: 0.5em 0;
+	background-color: #202020;
+}
+
+main {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	flex: 6;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	
+	/* create background pattern "Millimeterpapier" */
+	background-image:  linear-gradient(       #a0a0a0 1px, transparent 1px),
+	                   linear-gradient(90deg, #a0a0a0 1px, transparent 1px),
+	                   linear-gradient(       #606060 1px, transparent 1px),
+	                   linear-gradient(90deg, #606060 1px, transparent 1px);
+	background-size: 100px 100px,
+	                 100px 100px,
+	                  20px  20px,
+	                  20px  20px;
+	background-position: -1px -1px,
+	                     -1px -1px,
+	                     -1px -1px,
+	                     -1px -1px;
+}
+
+main div {
+	margin: 0;
+	padding: 1em;
+	overflow: scroll;
+}
+
+body a {
+	font-size: 125%;
+	color: #8080e0;
+	background-color: #202020d0;
+	border: 0.1em solid #e0e0e0;
+	margin: 1em;
+	padding: 1em;
+	border-radius: 0.5em;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	border-left:   1em solid #e0e0e0;
+	border-top:    1em solid #0000ff;
+	border-right:  1em solid #e0e0e0;
+	border-bottom: 1em solid #0000ff;
+	border-radius: 50%;
+	width: 5em;
+	height: 5em;
+	margin: -4.5em 0 0 -4.5em;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

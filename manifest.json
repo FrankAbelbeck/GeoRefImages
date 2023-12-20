@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+	"name": "GeoRefImages",
+	"version": "0.1",
+	"description": "Geo-reference images interactivly",
+	"icons": {
+		"48": "gfx/icon.svg",
+		"96": "gfx/icon.svg"
+	},
+	"background": {
+		"scripts": [
+			"js/background.js"
+		]
+	},
+	"permissions": [ "activeTab", "scripting", "contextMenus", "storage", "unlimitedStorage" ]
+}

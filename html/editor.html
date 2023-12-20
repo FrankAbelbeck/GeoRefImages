@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- This file is part of the GeoRefImages Firefox extension.
+
+    GeoRefImages is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    GeoRefImages is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with GeoRefImages.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/svg+xml" href="../gfx/icon.svg">
+		<title>Image Geo-Referencing Editor</title>
+		<script src="../js/editor.js"></script>
+		<link rel="stylesheet" href="../css/editor.css">
+		<link rel="stylesheet" href="../css/svg.css">
+	</head>
+	<body>
+		<main>
+			<h4>Image Geo-Referencing Editor</h4>
+			<div>
+				<svg xmlns="http://www.w3.org/2000/svg" id="svgCanvas">
+					<defs>
+						<path id="pathGuideH" /> 
+						<path id="pathGuideV" />
+						<mask id="maskCrop">
+							<rect width="100%" height="100%" />
+							<rect id="rectMaskCrop" />
+							<g id="grpMask"></g>
+						</mask>
+					</defs>
+					<image id="svgImage" mask="url(#maskCrop)" />
+					<use id="useCursorH" href="#pathGuideH" class="cursor" />
+					<use id="useCursorV" href="#pathGuideV" class="cursor" />
+				</svg>
+			</div>
+		</main>
+	</body>
+</html>
