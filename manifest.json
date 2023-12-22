@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "GeoRefImages",
-	"version": "0.1",
+	"version": "0.2",
 	"description": "Geo-reference images interactively",
 	"icons": {
 		"48": "gfx/icon.svg",
