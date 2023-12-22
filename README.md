@@ -27,4 +27,5 @@ imported as visual approach charts and can be shown at the correct coordinates.
 
 ## Changelog
 
+ * **2023-12-22** Added helper text to editor heading.
  * **2023-12-20** Initial release.

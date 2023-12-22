@@ -25,7 +25,7 @@ async function Initialise() {
 	let nodePathGuideV = document.getElementById("pathGuideV");
 	let nodeUseCursorH = document.getElementById("useCursorH");
 	let nodeUseCursorV = document.getElementById("useCursorV");
-	
+	let nodeSpanHeading = document.getElementById("spnHdg");
 	let nodeMaskCrop = document.getElementById("maskCrop");
 	let nodeRectMaskCrop = document.getElementById("rectMaskCrop");
 	
@@ -50,9 +50,7 @@ async function Initialise() {
 		.catch( (error) => { alert("error fetching image blob from local storage: " + error); return null; });
 	
 	if (blob) {
-		
 		// there is an image to display: continue, construct and wire GUI
-		
 		const reader = new FileReader();
 		reader.addEventListener("load", () => { image.src = reader.result; });
 		await reader.readAsDataURL(blob);
@@ -126,6 +124,7 @@ async function Initialise() {
 			if (arrPoint.length < 2) {
 				// less than two points defined: ask for lat/lon
 				alert("Please select a point for which you know longitude and latitude.");
+				nodeSpanHeading.innerHTML = ": select a point of known coordinates";
 				nodeSvg.onpointerup = (event) => {
 					if (event.button == 0) {
 						let fltLon = null;
@@ -148,6 +147,7 @@ async function Initialise() {
 				
 			} else if (arrPoint.length == 2) {
 				// exactly two points defined: next step, ask for region of interest
+				nodeSpanHeading.innerHTML = "";
 				nodeSvg.onpointerup = (event) => {
 					if (event.button == 0) {
 						nodeSvg.dispatchEvent(new CustomEvent("stateUpdated", { detail: {x: event.offsetX, y: event.offsetY} }));
@@ -158,10 +158,13 @@ async function Initialise() {
 					arrPoint.push({x:0,y:0});
 					arrPoint.push({x:image.width-1,y:image.height-1});
 					nodeSvg.dispatchEvent(new Event("stateUpdated"));
+				} else {
+					nodeSpanHeading.innerHTML = ": define a region of interest by selecting its first corner";
 				}
 				
 			} else if (arrPoint.length == 3) {
 				// three points defined -> first corner of crop mask rectangle defined, update SVG
+				nodeSpanHeading.innerHTML = ": define a region of interest by selecting its second corner";
 				nodeRectMaskCrop.setAttribute("x",event.detail.x);
 				nodeRectMaskCrop.setAttribute("y",event.detail.y);
 				
@@ -171,6 +174,7 @@ async function Initialise() {
 				if (arrPoint.length % 2 == 0) {
 					// even number of points defined: two lat/lon points, crop rectangle points and zero or more mask areas
 					// => ask user if them want to continue
+					nodeSpanHeading.innerHTML = "";
 					if (!confirm("If you want to add masked areas, click 'Ok'. If you choose 'Cancel', no masking will be applied.")) {
 						// nearly done: calculate bounding lat/lon rect,
 						//              ask for a unique name,
@@ -265,10 +269,13 @@ async function Initialise() {
 							await browser.storage.local.remove(strId).catch( (error) => { alert("error removing image blob from local storage: " + error); });
 						});
 						imgSvg.src = urlBlobSvg;
+					} else {
+						nodeSpanHeading.innerHTML = ": define a mask area by selecting its first corner";
 					}
 				} else {
 					// uneven number of points defined -> first corner of new mask area defined, update SVG
 					// create new mask rectangle and append to mask group
+					nodeSpanHeading.innerHTML = ": define a region of interest by selecting its second corner";
 					nodeRect = document.createElementNS("http://www.w3.org/2000/svg","rect");
 					nodeRect.setAttribute("x",event.detail.x);
 					nodeRect.setAttribute("y",event.detail.y);
